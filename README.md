@@ -16,3 +16,18 @@ dalam System.out.println terdapat elemen 2.Tampilkan Data Prestasi.
 dalam System.out.println terdapat elemen 3.Analisis Prestasi Berdasarkan Jenis.
 dalam System.out.println terdapat elemen 4.Keluar.
 dalam System.out.print terdapat elemen Pilih Menu.
+pilihan = input.nextInt() : untuk membaca bilangan bulat int.
+input.nextLine() : untuk membaca seluruh baris input.
+switch (pilihan) : untuk memilih kode yg akan di eksekusi berdasarkan nilai variabel.
+case 1 : untuk membuat percabangan,program akan memilih case code yg sesuai.
+perulangan if : untuk mengeksekusi kode jika kondisi terpenuhi.
+dalam System.out.println terdapat elemen "Jumlah Prestasi Telah Mencapai Batas Maksimal".
+Break berfungsi untuk menghentikan eksekusi loop.
+if (prestasiCount >=100) untuk memeriksa apakah nilai dari variabel prestasiCount lebih besar dari atau sama dengan 100.
+} untuk mendefinisikan akhir sebuah fungsi.
+dalam System.out.print,terdapat elemen "NamaMahasiswa".
+input.nextLine untuk membaca 1 barisan.
+dalam System.out.print,terdapat elemen "NIM"
+input.nextLine untuk membaca 1 barisan.
+dalam System.out.print,terdapat elemen "Jenis Prestasi"
+input.nextLine untuk membaca 1 barisan.
