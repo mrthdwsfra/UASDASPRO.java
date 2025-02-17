@@ -31,3 +31,5 @@ dalam System.out.print,terdapat elemen "NIM"
 input.nextLine untuk membaca 1 barisan.
 dalam System.out.print,terdapat elemen "Jenis Prestasi"
 input.nextLine untuk membaca 1 barisan.
+while (true){ ,looping tak terbatas artinya kode akan terus berjalan berulang ulang,kecuali ada kondisi yang menghentikan.
+dalam System.out.print,terdapat elemen 
