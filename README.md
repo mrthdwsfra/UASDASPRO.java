@@ -32,4 +32,13 @@ input.nextLine untuk membaca 1 barisan.
 dalam System.out.print,terdapat elemen "Jenis Prestasi"
 input.nextLine untuk membaca 1 barisan.
 while (true){ ,looping tak terbatas artinya kode akan terus berjalan berulang ulang,kecuali ada kondisi yang menghentikan.
-dalam System.out.print,terdapat elemen 
+dalam System.out.print,terdapat elemen "Tingkat prestasi(Lokal,Nasional,Internasional)
+input.nextLine untuk membaca 1 barisan.
+dalam perulangan if terdapat elemen "Lokal"
+terdapat perulangan "Nasional"
+terdapat perulangan "Internasional"
+Break berfungsi untuk menghentikan eksekusi loop.
+while (true){ ,looping tak terbatas artinya kode akan terus berjalan berulang ulang,kecuali ada kondisi yang menghentikan.
+dalam System.out.print,terdapat elemen "Input Tidak Valid Harap Masukkan Salah Satu Dari:Lokal,Nasional,Internasional"
+while (true){ ,looping tak terbatas artinya kode akan terus berjalan berulang ulang,kecuali ada kondisi yang menghentikan.
+dalam System.out.print,terdapat elemen"Tahun Prestasi (2010 hingga tahun saat ini)"
