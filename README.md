@@ -1,44 +1,90 @@
-import java.util.Scanner; : untuk membaca inputan
-public class : tempat membuat objek
-public static void main(String[]args):sebagai titik awal eksekusi program, String[] args:menerima jawaban setiap baris perintah.
-Scanner input:untuk membaca setiap inputan.
-dalam String terdapat elemen namaMahasiswa.
-dalam String terdapat elemen nimMahasiswa.
-dalam String terdapat elemen jenisPrestasi.
-dalam String terdapat elemen tingkatPrestasi.
-dalam integer terdapat elemen tahun prestasi.
-dalam integer terdapat elemen prestasiCount.
-dalam integer terdapat elemen pilihan.
-menggunakan perulangan do:untuk meng input setidaknya sekali,sebelum memeriksa valid atau tidak.
-dalam System.out.println terdapat elemen PENCATATAN PRESTASI MAHASISWA.
-dalam System.out.println terdapat elemen 1.Tambah Prestasi Mahasiswa.
-dalam System.out.println terdapat elemen 2.Tampilkan Data Prestasi.
-dalam System.out.println terdapat elemen 3.Analisis Prestasi Berdasarkan Jenis.
-dalam System.out.println terdapat elemen 4.Keluar.
-dalam System.out.print terdapat elemen Pilih Menu.
-pilihan = input.nextInt() : untuk membaca bilangan bulat int.
-input.nextLine() : untuk membaca seluruh baris input.
-switch (pilihan) : untuk memilih kode yg akan di eksekusi berdasarkan nilai variabel.
-case 1 : untuk membuat percabangan,program akan memilih case code yg sesuai.
-perulangan if : untuk mengeksekusi kode jika kondisi terpenuhi.
-dalam System.out.println terdapat elemen "Jumlah Prestasi Telah Mencapai Batas Maksimal".
-Break berfungsi untuk menghentikan eksekusi loop.
-if (prestasiCount >=100) untuk memeriksa apakah nilai dari variabel prestasiCount lebih besar dari atau sama dengan 100.
-} untuk mendefinisikan akhir sebuah fungsi.
-dalam System.out.print,terdapat elemen "NamaMahasiswa".
-input.nextLine untuk membaca 1 barisan.
-dalam System.out.print,terdapat elemen "NIM"
-input.nextLine untuk membaca 1 barisan.
-dalam System.out.print,terdapat elemen "Jenis Prestasi"
-input.nextLine untuk membaca 1 barisan.
-while (true){ ,looping tak terbatas artinya kode akan terus berjalan berulang ulang,kecuali ada kondisi yang menghentikan.
-dalam System.out.print,terdapat elemen "Tingkat prestasi(Lokal,Nasional,Internasional)
-input.nextLine untuk membaca 1 barisan.
-dalam perulangan if terdapat elemen "Lokal"
-terdapat perulangan "Nasional"
-terdapat perulangan "Internasional"
-Break berfungsi untuk menghentikan eksekusi loop.
-while (true){ ,looping tak terbatas artinya kode akan terus berjalan berulang ulang,kecuali ada kondisi yang menghentikan.
-dalam System.out.print,terdapat elemen "Input Tidak Valid Harap Masukkan Salah Satu Dari:Lokal,Nasional,Internasional"
-while (true){ ,looping tak terbatas artinya kode akan terus berjalan berulang ulang,kecuali ada kondisi yang menghentikan.
-dalam System.out.print,terdapat elemen"Tahun Prestasi (2010 hingga tahun saat ini)"
+import java.util.Scanner; :untuk membaca inputan
+
+public class uas1{ :untuk menginisialisasi
+
+    public static void main(String[] args) { :sebagai titik awal memulai sebuah program
+        Scanner input = new Scanner(System.in); : untuk menciptakan objek scanner input yang membaca dari input standar.
+        String[] namaMahasiswa = new String[100]; :menggunakan string untuk mempresentasikan teks,kalimat,kata atau karakter.
+        String[] nimMahasiswa = new String[100];
+        String[] jenisPrestasi = new String[100];
+        String[] tingkatPrestasi = new String[100];
+        int[] tahunPrestasi = new int[100];
+        int prestasiCount = 0;
+        int pilihan; :menggunakan int karna untuk menyimpan angka bilangan bulat
+        do { : menggunkan perulangan do-while untuk eksekusi minimal sekali dan untuk validasi input
+            System.out.println("=== PENCATATAN PRESTASI MAHASISWA ==="); :menggunakan System.out.println agar dapat menampilkan output dan untuk menambahkan garis baru
+            System.out.println("1. Tambah Prestasi Mahasiswa");
+            System.out.println("2. Tampilkan Daftar Prestasi");
+            System.out.println("3. Analisis Prestasi Berdasarkan Jenis");
+            System.out.println("4. Keluar");
+            System.out.print("Pilih menu: "); untuk menampilkan teks tanpa baris baru tanpa menambah baris pilihan = input.nextInt();untuk membaca bilangan bulat
+            input.nextLine(); : 
+            switch (pilihan) {
+                case 1:
+                if (prestasiCount >= 100) { 
+                    System.out.println("Jumlah prestasi telah mencapai batas maksimal."); 
+                    break; 
+                    } 
+
+                    System.out.print("Nama Mahasiswa: "); 
+                    namaMahasiswa[prestasiCount] = input.nextLine(); 
+                    System.out.print("NIM: "); 
+                    nimMahasiswa[prestasiCount] = input.nextLine(); 
+                    System.out.print("Jenis Prestasi: "); 
+                    jenisPrestasi[prestasiCount] = input.nextLine(); 
+                    while (true) { 
+                        System.out.print("Tingkat Prestasi (Lokal, Nasional, Internasional): "); 
+                        tingkatPrestasi[prestasiCount] = input.nextLine(); 
+                        if (tingkatPrestasi[prestasiCount].equalsIgnoreCase("Lokal") || 
+                        tingkatPrestasi[prestasiCount].equalsIgnoreCase("Nasional") || 
+                        tingkatPrestasi[prestasiCount].equalsIgnoreCase("Internasional")) {
+                            break; 
+                        } else { 
+                            System.out.println("Input tidak valid. Harap masukkan salah satu dari: Lokal, Nasional, Internasional."); 
+                        } 
+                    }
+                    while (true) { 
+                        System.out.print("Tahun Prestasi (2010 hingga tahun saat ini): "); 
+                        int tahun = input.nextInt(); 
+                        input.nextLine(); 
+                        if (tahun >= 2010 && tahun <= 2024) { 
+                            tahunPrestasi[prestasiCount] = tahun; 
+                            break; 
+                        } else { 
+                            System.out.println("Input tidak valid. Harap masukkan tahun antara 2010 hingga tahun saat ini."); 
+                        } 
+                    }
+
+                    prestasiCount++; 
+                    System.out.println("Prestasi berhasil ditambahkan!");
+                    break;
+                case 2:
+                if (prestasiCount > 0) {
+                    System.out.println("=== DAFTAR SEMUA PRESTASI ==="); 
+                    for (int i = 0; i < prestasiCount; i++) { 
+                        System.out.println("Nama: " + namaMahasiswa[i] + "| NIM: " + nimMahasiswa[i] + "| Jenis: " + jenisPrestasi[i] + "| Tingkat: " + tingkatPrestasi[i] + "| Tahun: " + tahunPrestasi[i]); 
+                    }
+                } else {
+                    System.out.println("belum ada data prestasi");
+                }                  
+                    break;
+                case 3:
+                System.out.print("Masukkan jenis prestasi yang ingin dianalisis: "); 
+                String jenis = input.nextLine(); 
+                System.out.println("=== ANALSIS PRESTASI ==="); 
+                for (int i = 0; i < prestasiCount; i++) { 
+                    if (jenisPrestasi[i].equalsIgnoreCase(jenis)) { 
+                        System.out.println("Nama: " + namaMahasiswa[i] + "| NIM: " + nimMahasiswa[i] + "| Tingkat: " + tingkatPrestasi[i] + "| Tahun: " + tahunPrestasi[i]); 
+                    } 
+                }
+                    break;
+                case 4: 
+                    System.out.println("Terima kasih!"); 
+                    break;
+                default:
+                    System.out.println("Pilihan tidak valid. Silakan coba lagi.");
+            }
+        } while (pilihan != 4);
+
+    }
+}
