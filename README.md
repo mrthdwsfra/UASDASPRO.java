@@ -32,40 +32,40 @@ public class uas1{ :untuk menginisialisasi
                     nimMahasiswa[prestasiCount] = input.nextLine(); 
                     System.out.print("Jenis Prestasi: "); 
                     jenisPrestasi[prestasiCount] = input.nextLine(); 
-                    while (true) { 
+                    while (true) { :untuk membuat loop yang berjalan tanpa henti atau disebut juga loop tak terbatas.
                         System.out.print("Tingkat Prestasi (Lokal, Nasional, Internasional): "); 
                         tingkatPrestasi[prestasiCount] = input.nextLine(); 
                         if (tingkatPrestasi[prestasiCount].equalsIgnoreCase("Lokal") || 
                         tingkatPrestasi[prestasiCount].equalsIgnoreCase("Nasional") || 
                         tingkatPrestasi[prestasiCount].equalsIgnoreCase("Internasional")) {
-                            break; 
-                        } else { 
+                            break; :untuk menghentikan eksekusi loop.
+                        } else {:jika kondisi bernilai salah, maka kode dalam blok else akan dijalankan.
                             System.out.println("Input tidak valid. Harap masukkan salah satu dari: Lokal, Nasional, Internasional."); 
                         } 
                     }
-                    while (true) { 
+                    while (true) { :untuk membuat loop yang berjalan tanpa henti atau disebut juga loop tak terbatas.
                         System.out.print("Tahun Prestasi (2010 hingga tahun saat ini): "); 
-                        int tahun = input.nextInt(); 
-                        input.nextLine(); 
-                        if (tahun >= 2010 && tahun <= 2024) { 
-                            tahunPrestasi[prestasiCount] = tahun; 
-                            break; 
-                        } else { 
+                        int tahun = input.nextInt(); :digunakan untuk membaca input angka.
+                        input.nextLine(); :dalam Java digunakan untuk membaca seluruh baris teks yang dimasukkan.
+                        if (tahun >= 2010 && tahun <= 2024) { :digunakan untuk memeriksa apakah nilai variabel tahun berada dalam rentang 2010 hingga 2024.
+                            tahunPrestasi[prestasiCount] = tahun; :tahunPrestasi[prestasiCount] = tahun; akan menyimpan nilai tahun ke dalam array tahunPrestasi pada indeks prestasiCount.
+                            break; :untuk menghentikan eksekusi loop.
+                        } else { :jika kondisi bernilai salah, maka kode dalam blok else akan dijalankan.
                             System.out.println("Input tidak valid. Harap masukkan tahun antara 2010 hingga tahun saat ini."); 
                         } 
                     }
 
-                    prestasiCount++; 
+                    prestasiCount++;:untuk menambah nilai variabel prestasiCount sebesar 1. 
                     System.out.println("Prestasi berhasil ditambahkan!");
-                    break;
-                case 2:
-                if (prestasiCount > 0) {
+                    break; :untuk menghentikan eksekusi loop.
+                case 2: ::Jika nilai yang dievaluasi sama dengan 3, maka kode yang terkait dengan case 3:
+                if (prestasiCount > 0) { :digunakan untuk memeriksa apakah nilai variabel prestasiCount lebih besar dari 0.
                     System.out.println("=== DAFTAR SEMUA PRESTASI ==="); 
-                    for (int i = 0; i < prestasiCount; i++) { 
+                    for (int i = 0; i < prestasiCount; i++) { :bagian dari loop for dalam Java yang digunakan untuk mengulang blok kode sebanyak prestasiCount.
                         System.out.println("Nama: " + namaMahasiswa[i] + "| NIM: " + nimMahasiswa[i] + "| Jenis: " + jenisPrestasi[i] + "| Tingkat: " + tingkatPrestasi[i] + "| Tahun: " + tahunPrestasi[i]); 
                     }
-                } else {
-                    System.out.println("belum ada data prestasi");
+                } else { :jika kondisi bernilai salah, maka kode dalam blok else akan dijalankan.
+                    System.out.println("belum ada data prestasi"); :digunakan untuk mencetak teks "belum ada data prestasi" ke terminal.
                 }                  
                     break; :untuk menghentikan eksekusi loop.
                 case 3: :Jika nilai yang dievaluasi sama dengan 3, maka kode yang terkait dengan case 3:
